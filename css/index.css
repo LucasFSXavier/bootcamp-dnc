@@ -1,12 +1,23 @@
+:root{
+  --azul-dnc: #0c70f2;
+  --preto-dnc: #303030;
+  --cinza-hover: #c9c9c9;
+
+  --fonte-padrao: 'Inter';
+}
+
   body{
     margin: 0px;
     padding: 0px;
+
+    background: linear-gradient(180deg, rgba(12, 112, 242, 0.5) 19.91%, rgba(12, 112, 242, 0) 24.84%), #303030;
+    background-repeat: no-repeat;
   }
   /* MENU DE NAVEGAÇÃO */
   #menu-principal{
     display: flex;
     justify-content: space-between;
-    background-color: #303030;
+    background-color: var(--preto-dnc);
     width: 100%;
     height: 100px;
     align-items: center;
@@ -21,7 +32,7 @@
     }
 
     #menu-principal div a{
-      font-family: 'Inter';
+      font-family: var(--fonte-padrao);
       font-size: 25px;
       font-weight: 600;
       color: white;
@@ -29,20 +40,116 @@
     }
 
       #menu-principal div a:hover{
-        color: #cccccc;
+        color: var(--cinza-hover);
       } 
 
     #menu-principal button{
       margin-right: 5%;
-      background-color: #0c70f2;
+      background-color: var(--azul-dnc);
       border: 0px;
       height: 40px;
       width: 80px;
-      font-family: 'Inter';
+      font-family: var(--fonte-padrao);
       font-size: 20px;
       font-weight: 600;
       color: #fff;
       
       box-shadow: 3px 2px 4px rgba(12, 112, 242, 0.25);
+      cursor: pointer;
+    }
+
+  /* SEÇÃO PRINCIPAL DO SITE */
+
+  section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 100px 0px 100px 0px;
+  }
+
+    header{
+      color: white;
+      font-family: var(--fonte-padrao);
+    }
+
+    header h1{
+      font-size: 80px;
+      font-weight: 800;
+      text-transform: uppercase;
+      text-align: center;
+
+      margin-bottom: 20px;
+    }
+
+    header h2{
+      text-align: center;
+      font-size: 40px;
+      font-weight: 400;
+
+      margin-bottom: 100px;
+    }
+
+    header .invert{
+      background-color: black;
+      font-weight: bold;
+      padding: 5px;
+    }
+
+    /* SEÇÃO FORMULÁRIO */
+
+    form{
+      color: white;
+      font-family: var(--fonte-padrao);
+      font-size: 30px;
+      font-weight: 600;
+      width: 600px;
+    }
+
+    .form-group{
+      display: flex;
+      flex-direction: column;
+      margin: 10px 0px 10px 0px;
+    }
+
+    form input{
+      border-radius: 10px;
+      height: 45px;
+      border: 0px;
+      font-size: 20px;
+      padding-left: 10px;
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    form label{
+      margin: 10px 0px 10px 0px;
+    }
+
+    form input::placeholder{
+      color: rgba(57, 57, 57, 0.5);
+    }
+
+    .checkbox-itens{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .checkbox-itens label{
+      font-size: 25px;
+    }
+
+    input[type="checkbox"]{
+      transform: scale(1.7)
+    }
+
+    input[type="submit"]{
+      background-color: rgba(12, 112, 242, 0.9);
+      width: 100%;
+      height: 56px;
+      font-size: 32px;
+      color: white;
+      margin-top: 100px;
+      box-shadow: 0px 6px 4px rgba(12, 112, 242, 0.25);
       cursor: pointer;
     }
