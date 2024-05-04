@@ -292,4 +292,16 @@
       .checkbox-itens label{
         font-size: 15px;
       }
+
+      /* RODAPÉ */
+
+      footer .linha-navegacao{
+        flex-direction: column;
+      }
+
+      footer .endereco{
+        width: 95%;
+        margin-bottom: 20px;
+      }
+
     }
